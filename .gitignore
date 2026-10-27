@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+build/
+dist/
+
+# Environments / IDE
+.venv/
+venv/
+.env
+.vscode/
+.idea/
+
+# Checkpoints and datasets are NEVER committed -- obtain them from their
+# original providers (docs/REPRODUCIBILITY.md).
+ckpts/
+data/
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.pickle
+*.bin
+*.h5
+*.hdf5
+*.so
+
+# Run outputs: CARLA recordings, evaluator results, per-tick npz traces
+experiments/
+carla_runs/
+results/
+traces/
+*.npz
+*.npy
+*.log
+*.rec
+*.mp4
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# OS / editor noise
+.DS_Store
+*~
+*.tmp

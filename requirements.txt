@@ -1,0 +1,22 @@
+# CLRE core requirements (refinement + execution layer + adapters).
+#
+# These cover the code IN THIS REPOSITORY and its offline tests only.
+# Running closed-loop evaluation additionally requires CARLA 0.9.15,
+# Bench2Drive and a learned-planner stack (Bench2DriveZoo for VAD/UniAD),
+# each with its own, much heavier dependency set -- install those from the
+# upstream projects and do not let this file override their pinned versions.
+#
+# Versions below are lower bounds, not pins: the paper runs used the
+# Bench2DriveZoo `b2d_zoo` environment (Python 3.8, torch 1.13 + cu117).
+numpy>=1.20
+torch>=1.10
+
+# Needed to run tests/ (`python -m pytest tests/ -q`), which is the documented
+# way to verify an installation; no test here needs CARLA, a checkpoint or a GPU.
+pytest>=6.0
+
+# Optional, install explicitly if needed. opencv is used ONLY by the UniAD
+# adapter's segmentation-raster path (clre/adapters/uniad_adapter.py imports
+# cv2 lazily, inside the one function that needs it). No released test
+# requires it, so it is deliberately not a hard requirement.
+#   pip install "opencv-python>=4.5"

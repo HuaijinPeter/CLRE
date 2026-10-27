@@ -1,0 +1,32 @@
+CLRE -- Closed-Loop Refinement and Execution for Learned Driving Planners
+Copyright (c) 2026 Huaijin Hu, Shanting Wang, Zhongyu Mo, Andreas A. Malikopoulos
+
+This repository contains ONLY code written by the CLRE authors. It is
+released under the MIT License (see LICENSE).
+
+It is designed to run on top of third-party projects that are NOT included
+here and are NOT redistributed in any form, in whole or in part:
+
+  * CARLA 0.9.15                 -- MIT License, (c) Computer Vision Center (CVC)
+                                    at the Universitat Autonoma de Barcelona
+  * Bench2Drive                  -- CC BY-NC-ND 4.0, (c) Thinklab-SJTU
+  * Bench2DriveZoo (VAD, UniAD)  -- CC BY-NC-ND 4.0, (c) Thinklab-SJTU
+  * CARLA leaderboard            -- MIT License, (c) CARLA
+  * CARLA scenario_runner        -- MIT License, (c) CARLA
+  * DriveTransformer             -- NO LICENSE FILE PUBLISHED, (c) Thinklab-SJTU
+
+Obtain each of them from its own official source under its own terms. Two
+consequences follow and are stated plainly because they bound what this
+repository can be used for:
+
+  1. The Bench2Drive and Bench2DriveZoo licenses include a NonCommercial
+     term. Use of Bench2Drive or Bench2DriveZoo remains subject to those
+     NonCommercial terms, independently of CLRE's MIT license.
+  2. The same licenses include a NoDerivatives term, and DriveTransformer
+     publishes no license at all. This is why the files that MODIFY or
+     EMBED upstream code -- the planner agent wrappers and the PEB-v2
+     controller subclass -- are documented in integration/ rather than
+     shipped. See docs/LICENSE_AUDIT.md.
+
+Checkpoints are not distributed here. Obtain them from their original
+providers (see docs/REPRODUCIBILITY.md).
